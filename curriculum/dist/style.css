@@ -9,6 +9,12 @@
   border-width: 15px;
 }
 
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .body {
    background-image: url('https://drive.google.com/uc?export=download&id=15oJu--x1hm1ddpL9N8v-ZnAWQ_NATc6X');
    height: 100%;
