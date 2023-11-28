@@ -13,6 +13,7 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
+    z-index: -2;
 }
 
 .body {
@@ -30,11 +31,11 @@ body, html {
 .datos {
   font-family: "Playfair Display";
   font-size: xx-large;
-  color: transparent; /* Haz el texto transparente */
   
-  background: radial-gradient(#ffffff, #D00505);
-  -webkit-background-clip: text; /* Establece el clip del fondo al texto */
-  background-clip: text; /* Establece el clip del fondo al texto */
+  color: transparent;  
+  background: radial-gradient(#ccc, #D00505);
+  -webkit-background-clip: text;
+  background-clip: text;
 
   width: 70%;
   text-align: left;
@@ -58,7 +59,7 @@ img {
   border: none;
   padding: 16px 32px;
   color: azure;
-  position: relative; /* Añade esta línea */
+  position: relative;
   border-radius: 12px;
 }
 
@@ -68,8 +69,8 @@ img {
   top: 0;
   left: 0;
   z-index: -1; /* Cambia esto a 0 */
-  width: 110%;
-  height: 110%;
+  width: 120%;
+  height: 120%;
   background: linear-gradient(45deg, red, blue, deeppink, blue, red, blue, deeppink, blue);
   background-size:800%;
   border-radius: 12px;
@@ -99,6 +100,5 @@ img {
   border-radius: 10%;
   
   position: relative;
-  right: 10%;
   top: -130px;
-}
+  }
