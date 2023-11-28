@@ -29,7 +29,6 @@ body, html {
   font-family: "Playfair Display";
   font-size: xx-large;
   color: transparent; /* Haz el texto transparente */
-  text-transform: capitalize;
   
   background: radial-gradient(#ffffff, #D00505);
   -webkit-background-clip: text; /* Establece el clip del fondo al texto */
