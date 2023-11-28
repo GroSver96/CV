@@ -76,7 +76,7 @@ img {
 }
 
 .botones:active {
-  background-color: #154360;
+  background-color: #ccc;
 }
 
 @keyframes glowing {
