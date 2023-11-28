@@ -26,8 +26,9 @@ body, html {
 
 .datos {
   font-family: "Playfair Display";
-  color: #F1C40F;
-  font-size: 20px;
+  text-transform:capitalize;
+  color: #D00505;
+  font-size: xx-large;
   width: 70%;
   text-align: left;
   position: relative;
@@ -43,7 +44,8 @@ img {
 
 .botones {
   font-family: "Permanent Marker";
-  font-size: 20px;
+  font-size: xx-large;
+  font-weight: lighter;
   border-radius: 5px;
   background-color: #2874A6;
   border: none;
