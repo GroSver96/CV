@@ -3,7 +3,6 @@
   color: #ffffff;
   font-size: 25px;
   text-align: center;
-  background-image: url('https://www.roc21.com/blog/wp-content/uploads/2012/09/fondos-para-pa%CC%81ginas-web-6.jpg');
   border: 20px solid;
   border-style: inset;
   border-color: #2E86C1;
@@ -11,7 +10,12 @@
 }
 
 .body {
-   background-image: url('https://www.roc21.com/blog/wp-content/uploads/2012/09/fondos-para-pa%CC%81ginas-web-6.jpg');
+   background-image: url('https://drive.google.com/uc?export=download&id=15oJu--x1hm1ddpL9N8v-ZnAWQ_NATc6X');
+   height: 100%;
+   width: 100%;
+   background-size: cover; /* Ajusta el tamaño para cubrir completamente el fondo */
+   background-position: center; /* Centra la imagen en el fondo */
+   margin: 0; /* Elimina los márgenes para ocupar toda la pantalla */
 }
 
 .datos {
@@ -25,10 +29,10 @@
 }
 
 img {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   float: right;
-  border-radius: 100%;
+  border-radius: 10%;
 }
 
 .botones {
