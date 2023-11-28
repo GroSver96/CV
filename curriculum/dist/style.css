@@ -3,15 +3,15 @@
   color: #ffffff;
   font-size: 25px;
   text-align: center;
-  background-color: #050D4D;
+  background-image: url('https://www.roc21.com/blog/wp-content/uploads/2012/09/fondos-para-pa%CC%81ginas-web-6.jpg');
   border: 20px solid;
   border-style: inset;
-  border-color: #2E86C178;
+  border-color: #2E86C1;
   border-width: 15px;
 }
 
 .body {
-  background-image: url("https://github.com/GroSver96/CV/blob/main/curriculum/img/Fondo.jpg");
+   background-image: url('https://www.roc21.com/blog/wp-content/uploads/2012/09/fondos-para-pa%CC%81ginas-web-6.jpg');
 }
 
 .datos {
