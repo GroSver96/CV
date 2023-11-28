@@ -1,0 +1,49 @@
+.header {
+  font-family: "Permanent Marker";
+  color: #ffffff;
+  font-size: 25px;
+  text-align: center;
+  background-color: #050D4D;
+  border: 20px solid;
+  border-style: inset;
+  border-color: #2E86C178;
+  border-width: 15px;
+}
+
+.body {
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.roc21.com%2F2022%2F07%2F25%2Ffondos-para-paginas-web%2F&psig=AOvVaw0xNF7Qu1X2MeBxnYPmjnxX&ust=1701225258694000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCODx9I_U5YIDFQAAAAAdAAAAABAx");
+}
+
+.datos {
+  font-family: "Playfair Display";
+  color: #F1C40F;
+  font-size: 20px;
+  width: 70%;
+  text-align: left;
+  position: relative;
+  left: 15%;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  float: right;
+  border-radius: 100%;
+}
+
+.botones {
+  font-family: "Permanent Marker";
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #2874A6;
+  border: none;
+  cursor: pointer;
+}
+
+.botones:hover {
+  background-color: #1A5276;
+}
+
+.botones:active {
+  background-color: #154360;
+}
