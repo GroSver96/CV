@@ -22,6 +22,7 @@ body, html {
    background-size: cover; /* Ajusta el tamaño para cubrir completamente el fondo */
    background-position: center; /* Centra la imagen en el fondo */
    margin: 0; /* Elimina los márgenes para ocupar toda la pantalla */
+   z-index: -2;
 }
 
 .datos {
