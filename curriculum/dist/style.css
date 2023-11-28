@@ -19,8 +19,10 @@ body, html {
    background-image: url('https://drive.google.com/uc?export=download&id=15oJu--x1hm1ddpL9N8v-ZnAWQ_NATc6X');
    height: 100%;
    width: 100%;
+  
    position: relative;
    z-index: -2;
+  
    background-size: cover; /* Ajusta el tamaño para cubrir completamente el fondo */
    background-position: center; /* Centra la imagen en el fondo */
    margin: 0; /* Elimina los márgenes para ocupar toda la pantalla */
@@ -40,7 +42,7 @@ body, html {
   text-align: left;
   position: relative;
   left: 15%;
-  z-index: -1;
+  z-index: -2;
 }
 
 img {
@@ -54,11 +56,14 @@ img {
   font-family: "Permanent Marker";
   font-size: xx-large;
   font-weight: lighter;
+  
   background: black;
   cursor: pointer;
   border: none;
-  padding: 16px 32px;
   color: azure;
+  
+  padding: 16px 32px;
+  
   position: relative;
   border-radius: 12px;
 }
@@ -68,7 +73,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; /* Cambia esto a 0 */
+  z-index: -1;
   width: 120%;
   height: 120%;
   background: linear-gradient(45deg, red, blue, deeppink, blue, red, blue, deeppink, blue);
