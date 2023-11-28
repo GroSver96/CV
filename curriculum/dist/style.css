@@ -17,19 +17,21 @@ body, html {
 
 .body {
    background-image: url('https://drive.google.com/uc?export=download&id=15oJu--x1hm1ddpL9N8v-ZnAWQ_NATc6X');
-   height: 100%;
-   width: 100%;
    background-size: cover; /* Ajusta el tamaño para cubrir completamente el fondo */
    background-position: center; /* Centra la imagen en el fondo */
    margin: 0; /* Elimina los márgenes para ocupar toda la pantalla */
-   z-index: -2;
 }
 
 .datos {
   font-family: "Playfair Display";
-  text-transform:capitalize;
-  color: #D00505;
   font-size: xx-large;
+  color: transparent; /* Haz el texto transparente */
+  text-transform: capitalize;
+  
+  background: radial-gradient(#ffffff, #D00505);
+  -webkit-background-clip: text; /* Establece el clip del fondo al texto */
+  background-clip: text; /* Establece el clip del fondo al texto */
+
   width: 70%;
   text-align: left;
   position: relative;
@@ -86,4 +88,3 @@ img {
         background-position: 0 0;
     }
 }
-
