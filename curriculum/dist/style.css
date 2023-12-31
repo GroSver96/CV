@@ -21,8 +21,6 @@ body, html {
    width: 100%;
   
    position: relative;
-   /*z-index: -3;*/
-  
    background-size: cover; /* Ajusta el tamaño para cubrir completamente el fondo */
    background-position: center; /* Centra la imagen en el fondo */
    margin: 0; /* Elimina los márgenes para ocupar toda la pantalla */
@@ -42,7 +40,6 @@ body, html {
   text-align: left;
   position: relative;
   left: 15%;
-  /*z-index: -2;*/
 }
 
 img {
@@ -106,5 +103,4 @@ img {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  z-index: 1;
 }
