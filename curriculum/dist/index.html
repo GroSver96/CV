@@ -1,53 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grover Hernani Medina</title>
+  <meta name="description" content="Currículum de Grover Hernani Medina - Estudiante de Ingeniería en Sistemas">
+  <title>Grover Hernani Medina - Currículum</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="body">
+  <div class="container">
     <header class="header">
       <h1>Grover Hernani Medina</h1>
+      <p class="subtitle">Estudiante de Ingeniería en Sistemas</p>
     </header>
 
-    <div class="datos">
-      <img src="https://drive.google.com/uc?export=download&id=1Y7xBdTA3xNt6Rv0hAuvC9sw_TdXVSq_5" alt="Foto CV" width="200px" height="200px">
-      <ul>
-        <li>Estudiante de Ingenieria en Sistemas (5to semestre)
-          <br>
-          UNANDES (Universidad de los Andes)</li>
-      </ul>
-      <ul>
-      <li>Técnico en Instalación de Software - Ensamblaje y Mantenimiento de Computadoras
-      <br>
-      (E.T.A. Don Bosco)</li>
-      </ul>
-      <ul>
-        <li>Programador Jr (JavaScript, HTML, CSS)
-        <br>
-        <a href="https://github.com/GroSver96">Repositorio GitHub</a></li>
-      </ul>
-      <p>
-        hernanigrover@gmail.com<br>
-        +591 60557118
-      </p>
-      <a href="https://wa.me/59160557118?text=%C2%A1Hola!%20Me%20comunico%20por%20desarrollo%20de%20software">
-      <button class="botones">Contactar</button>
-      </a>
-      <a href="https://drive.google.com/file/d/1-UlBp6AacAmKPszbIzy6LH0RCW1cHpCW/view?usp=sharing" download="CV Grover Hernani.pdf">
-      <button class="botones">Curriculum Vitae</button>
-        </a>
-      <button class="botones">
-        <input type="image" src="https://c0.klipartz.com/pngpicture/341/254/gratis-png-icono-de-compartir-iconos-de-la-computadora-como-boton-compartir-facebook-facebook-thumbnail.png" style="border: double;" height="15px"; align="center";/>
-      </button>
-    </div>
-    <div>
-      <img class="qr" src="https://drive.google.com/uc?export=download&id=1CmVgOHO1tx6ywVq1neAbwYHHycN6tpFu" alt="QR">
-    </div>
+    <main class="main-content">
+      <div class="profile-section">
+        <div class="photo-container">
+          <img src="../img/foto.png" alt="Foto de perfil de Grover Hernani" class="profile-photo">
+        </div>
+        
+        <div class="info-section">
+          <section class="education">
+            <h2>Formación Académica</h2>
+            <ul>
+              <li>
+                <strong>Estudiante de Ingeniería en Sistemas (7mo semestre)</strong>
+                <br>
+                UNANDES (Universidad de los Andes)
+              </li>
+              <li>
+                <strong>Técnico en Instalación de Software - Ensamblaje y Mantenimiento de Computadoras</strong>
+                <br>
+                E.T.A. Don Bosco
+              </li>
+            </ul>
+          </section>
+          
+          <section class="skills">
+            <h2>Habilidades Técnicas</h2>
+            <ul>
+              <li>
+                <strong>Programador Jr</strong> (C#, C++, Python, PHP, JavaScript, HTML, CSS)
+                <br>
+                <a href="https://github.com/GroSver96" class="github-link">Ver repositorios en GitHub</a>
+              </li>
+            </ul>
+          </section>
+          
+          <section class="contact">
+            <h2>Contacto</h2>
+            <p class="contact-info">
+              <span class="email">hernanigrover@gmail.com</span><br>
+              <span class="phone">+591 60557118</span>
+            </p>
+            
+            <div class="buttons-container">
+              <a href="https://wa.me/59160557118?text=%C2%A1Hola!%20Me%20comunico%20por%20desarrollo%20de%20software" class="btn contact-btn">
+                Contactar por WhatsApp
+              </a>
+              <a href="https://drive.google.com/file/d/1-UlBp6AacAmKPszbIzy6LH0RCW1cHpCW/view?usp=sharing" download="CV_Grover_Hernani.pdf" class="btn download-btn">
+                Descargar CV
+              </a>
+              <button class="btn share-btn" id="shareBtn">
+                Compartir
+                <img src="https://cdn-icons-png.flaticon.com/512/2099/2099087.png" alt="Icono compartir" class="share-icon">
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    
+    <aside class="qr-section">
+      <img src="../img/QR.png" alt="Código QR para contacto" class="qr-code">
+    </aside>
   </div>
+
+  <script>
+    // Script para compartir el currículum
+    document.getElementById('shareBtn').addEventListener('click', function() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Currículum de Grover Hernani Medina',
+          text: 'Echa un vistazo al currículum de Grover Hernani Medina',
+          url: window.location.href
+        })
+        .then(() => console.log('Contenido compartido exitosamente'))
+        .catch((error) => console.log('Error al compartir:', error));
+      } else {
+        // Fallback para navegadores que no soportan la API de compartir
+        alert('Para compartir, copia esta URL: ' + window.location.href);
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,70 +1,182 @@
-.header {
-  font-family: "Permanent Marker";
-  color: #ffffff;
-  font-size: 25px;
-  text-align: center;
-  border: 20px solid;
-  border-style: inset;
-  border-color: #2E86C1;
-  border-width: 15px;
+/* Variables para colores y fuentes */
+:root {
+  --primary-color: #2E86C1;
+  --secondary-color: #D00505;
+  --text-color: #ffffff;
+  --background-gradient: radial-gradient(#ccc, #D00505);
+  --button-bg: black;
+  --button-text: azure;
+  --font-title: "Permanent Marker", cursive;
+  --font-body: "Playfair Display", serif;
+}
+
+/* Reset y estilos base */
+* {
+  box-sizing: border-box;
 }
 
 body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
 }
 
-.body {
-   background-image: url('https://drive.google.com/uc?export=download&id=15oJu--x1hm1ddpL9N8v-ZnAWQ_NATc6X');
-   height: 100%;
-   width: 100%;
-  
-   position: relative;
-   background-size: cover; /* Ajusta el tamaño para cubrir completamente el fondo */
-   background-position: center; /* Centra la imagen en el fondo */
-   margin: 0; /* Elimina los márgenes para ocupar toda la pantalla */
-}
-
-.datos {
-  font-family: "Playfair Display";
-  font-size: xx-large;
-  
-  color: transparent;  
-  background: radial-gradient(#ccc, #D00505);
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  width: 70%;
-  text-align: left;
+.container {
+  background-image: url('https://drive.google.com/uc?export=download&id=15oJu--x1hm1ddpL9N8v-ZnAWQ_NATc6X');
+  height: 100%;
+  width: 100%;
   position: relative;
-  left: 15%;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-img {
+/* Header */
+.header {
+  font-family: var(--font-title);
+  color: var(--text-color);
+  font-size: 25px;
+  text-align: center;
+  border: 15px solid;
+  border-style: inset;
+  border-color: var(--primary-color);
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+/* Contenido principal */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.photo-container {
+  flex: 0 0 auto;
+}
+
+.profile-photo {
   width: 350px;
   height: 350px;
-  float: right;
   border-radius: 10%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.botones {
-  font-family: "Permanent Marker";
-  font-size: xx-large;
+.info-section {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+/* Secciones de información */
+.education, .skills, .contact {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-family: var(--font-title);
+  color: var(--text-color);
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: transparent;
+  background: var(--background-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.github-link {
+  color: #4da6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+}
+
+.contact-info {
+  font-size: 18px;
+  line-height: 1.5;
+  color: transparent;
+  background: var(--background-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 20px;
+}
+
+/* Botones */
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn {
+  font-family: var(--font-title);
+  font-size: 18px;
   font-weight: lighter;
-  
-  background: black;
+  background: var(--button-bg);
   cursor: pointer;
   border: none;
-  color: azure;
-  
-  padding: 16px 32px;
-  
-  position: relative;
+  color: var(--button-text);
+  padding: 12px 24px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 12px;
+  position: relative;
+  transition: transform 0.2s;
 }
 
-.botones::before {
+.btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -73,33 +185,118 @@ img {
   width: 120%;
   height: 120%;
   background: linear-gradient(45deg, red, blue, deeppink, blue, red, blue, deeppink, blue);
-  background-size:800%;
+  background-size: 800%;
   border-radius: 12px;
   filter: blur(8px);
   animation: glowing 20s linear infinite;
 }
 
-.botones:active {
-  background-color: #ccc;
+.btn:hover {
+  transform: translateY(-2px);
 }
 
-@keyframes glowing {
-    0% {
-        background-position: 0 0;
-    }
-    50% {
-        background-position: 400% 0;
-    }
-    100% {
-        background-position: 0 0;
-    }
+.btn:active {
+  transform: translateY(1px);
 }
 
-.qr{
-  height: 15%;
-  width: 15%;
-  border-radius: 10%;
+.share-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  filter: invert(1);
+}
+
+/* QR */
+.qr-section {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 20px;
+  right: 20px;
+}
+
+.qr-code {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  padding: 5px;
+}
+
+/* Animación */
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .header {
+    font-size: 20px;
+    border-width: 10px;
+  }
+  
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-photo {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .info-section {
+    width: 100%;
+  }
+  
+  .buttons-container {
+    justify-content: center;
+  }
+  
+  .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  
+  .qr-section {
+    position: static;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .qr-code {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 18px;
+  }
+  
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+  }
+  
+  li, .contact-info {
+    font-size: 16px;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
