@@ -13,7 +13,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--text-dark);
-  background-image: url('img/fondo.gif'); 
+  background-image: url('../img/fondo.gif');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
