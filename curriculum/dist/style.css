@@ -1,177 +1,49 @@
-/* --- Variables de Color --- */
-:root {
-  --primary-color: #050D4D; /* Tu azul oscuro */
-  --secondary-color: #2874A6; /* Tu azul claro para botones */
-  --accent-color: #F1C40F; /* Tu amarillo para detalles */
-  --text-dark: #333333;
-  --text-light: #666666;
-  --bg-container: rgba(255, 255, 255, 0.95); /* Fondo blanco semitransparente */
+.header {
+  font-family: "Permanent Marker";
+  color: #ffffff;
+  font-size: 25px;
+  text-align: center;
+  background-color: #050D4D;
+  border: 20px solid;
+  border-style: inset;
+  border-color: #2E86C178;
+  border-width: 15px;
 }
 
-/* --- Reseteo Básico --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.body {
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.roc21.com%2F2022%2F07%2F25%2Ffondos-para-paginas-web%2F&psig=AOvVaw0xNF7Qu1X2MeBxnYPmjnxX&ust=1701225258694000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCODx9I_U5YIDFQAAAAAdAAAAABAx");
 }
 
-/* --- Fondo y Cuerpo --- */
-body {
-  font-family: 'Roboto', sans-serif;
-  color: var(--text-dark);
-  /* Aquí está la corrección de tu fondo */
-  background-image: url('img/logo.gif');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-color: var(--primary-color); /* Color de respaldo */
-  
-  /* Centrar el contenedor en la pantalla */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
+.datos {
+  font-family: "Playfair Display";
+  color: #F1C40F;
+  font-size: 20px;
+  width: 70%;
+  text-align: left;
+  position: relative;
+  left: 15%;
 }
 
-/* --- Contenedor del CV --- */
-.cv-container {
-  background-color: var(--bg-container);
-  max-width: 700px;
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+img {
+  width: 300px;
+  height: 300px;
+  float: right;
+  border-radius: 100%;
 }
 
-/* --- Cabecera --- */
-.cv-header {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 30px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  border-bottom: 5px solid var(--accent-color);
-}
-
-.profile-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--accent-color);
-}
-
-.header-titles h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 28px;
-  margin-bottom: 5px;
-}
-
-.header-titles h2 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #D6EAF8;
-}
-
-/* --- Cuerpo del CV --- */
-.cv-body {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.info-section h3 {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--primary-color);
-  margin-bottom: 15px;
-  font-size: 18px;
-  border-bottom: 2px solid #eeeeee;
-  padding-bottom: 5px;
-}
-
-.info-list, .contact-list {
-  list-style: none;
-}
-
-.info-list li {
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-}
-
-.info-list li span {
-  color: var(--text-light);
-  font-size: 14px;
-  margin-top: 3px;
-}
-
-.contact-list li {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 15px;
-}
-
-.contact-list i {
-  color: var(--secondary-color);
-  width: 20px;
-}
-
-/* --- Botones --- */
-.cv-actions {
-  padding: 0 30px 30px 30px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
-
-.btn {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 12px 20px;
-  border-radius: 8px;
+.botones {
+  font-family: "Permanent Marker";
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #2874A6;
   border: none;
   cursor: pointer;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.3s ease;
-  color: white;
 }
 
-.btn-whatsapp { background-color: #25D366; }
-.btn-whatsapp:hover { background-color: #1EBE5A; }
+.botones:hover {
+  background-color: #1A5276;
+}
 
-.btn-github { background-color: #333; }
-.btn-github:hover { background-color: #111; }
-
-.btn-cv { background-color: var(--secondary-color); }
-.btn-cv:hover { background-color: #1A5276; }
-
-.btn-share { background-color: var(--accent-color); color: var(--primary-color); }
-.btn-share:hover { background-color: #D4AC0D; }
-
-/* --- Diseño Responsivo (Móviles) --- */
-@media (max-width: 600px) {
-  .cv-header {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .cv-actions {
-    flex-direction: column;
-  }
-  
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
+.botones:active {
+  background-color: #154360;
 }
