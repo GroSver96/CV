@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
   const btnCompartir = document.getElementById('btnCompartir');
 
