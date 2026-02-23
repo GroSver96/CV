@@ -10,8 +10,14 @@
   border-width: 15px;
 }
 
-.body {
-  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.roc21.com%2F2022%2F07%2F25%2Ffondos-para-paginas-web%2F&psig=AOvVaw0xNF7Qu1X2MeBxnYPmjnxX&ust=1701225258694000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCODx9I_U5YIDFQAAAAAdAAAAABAx");
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-dark);
+  background-image: url('img/fondo.gif'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: var(--primary-color);
 }
 
 .datos {
