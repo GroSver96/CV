@@ -1,49 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grover Hernani Medina</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="stylesheet.css">
+  <title>Grover Hernani Medina | Portafolio</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="body">
-    <header class="header">
-      <h1>Grover Hernani Medina</h1>
+
+  <main class="cv-container">
+    
+    <header class="cv-header">
+      <img src="https://cdn-images.livecareer.es/pages/foto_cv_lc_es_4.jpg" alt="Foto de Grover Hernani" class="profile-img">
+      <div class="header-titles">
+        <h1>Grover Hernani Medina</h1>
+        <h2>Programador Jr. | Técnico en Software</h2>
+      </div>
     </header>
 
-    <div class="datos">
-      <img src="https://cdn-images.livecareer.es/pages/foto_cv_lc_es_4.jpg" alt="Foto CV" width="200px" height="200px">
-      <ul>
-        <li>Estudiante de Ingenieria en Sistemas (7mo semestre)
-          <br>
-          UNANDES (Universidad de los Andes)</li>
-      </ul>
-      <ul>
-      <li>Técnico en Instalación de Software - Ensamblaje y Mantenimiento de Computadoras
-      <br>
-      (E.T.A. Don Bosco)</li>
-      </ul>
-      <ul>
-        <li>Programador Jr
-        <br>
-        <a href="https://github.com/GroSver96">Repositorio GitHub</a></li>
-      </ul>
-      <p>
-        27 años<br>
-        hernanigrover@gmail.com<br>
-        +591 60557118
-      </p>
-      <a href="https://wa.me/59160557118?text=%C2%A1Hola!%20Me%20comunico%20por%20desarrollo%20de%20software">
-      <button class="botones">Contactar</button>
-      </a>
-      <button class="botones">Curriculum Vitae</button>
-      <button class="botones">
-        <input type="image" src="https://www.pngwing.com/es/free-png-nmqpb" style="border: double;"/>
-      </button>
+    <div class="cv-body">
+      <section class="info-section">
+        <h3><i class="fas fa-graduation-cap"></i> Formación Académica</h3>
+        <ul class="info-list">
+          <li>
+            <strong>Estudiante de Ingeniería en Sistemas (7mo semestre)</strong>
+            <span>UNANDES (Universidad de los Andes)</span>
+          </li>
+          <li>
+            <strong>Técnico en Instalación de Software - Ensamblaje y Mantenimiento</strong>
+            <span>E.T.A. Don Bosco</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="info-section">
+        <h3><i class="fas fa-address-book"></i> Datos de Contacto</h3>
+        <ul class="contact-list">
+          <li><i class="fas fa-envelope"></i> hernanigrover@gmail.com</li>
+          <li><i class="fas fa-phone"></i> +591 60557118</li>
+          <li><i class="fas fa-user"></i> 27 años</li>
+        </ul>
+      </section>
     </div>
-  </div>
+
+    <footer class="cv-actions">
+      <a href="https://wa.me/59160557118?text=%C2%A1Hola!%20Me%20comunico%20por%20desarrollo%20de%20software" target="_blank" class="btn btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://github.com/GroSver96" target="_blank" class="btn btn-github">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <button class="btn btn-cv">
+        <i class="fas fa-file-pdf"></i> Ver CV
+      </button>
+      <button class="btn btn-share" id="btnCompartir">
+        <i class="fas fa-share-nodes"></i> Compartir
+      </button>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

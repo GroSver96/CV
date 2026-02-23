@@ -1,302 +1,177 @@
-/* Variables para colores y fuentes */
+/* --- Variables de Color --- */
 :root {
-  --primary-color: #2E86C1;
-  --secondary-color: #D00505;
-  --text-color: #ffffff;
-  --background-gradient: radial-gradient(#ccc, #D00505);
-  --button-bg: black;
-  --button-text: azure;
-  --font-title: "Permanent Marker", cursive;
-  --font-body: "Playfair Display", serif;
+  --primary-color: #050D4D; /* Tu azul oscuro */
+  --secondary-color: #2874A6; /* Tu azul claro para botones */
+  --accent-color: #F1C40F; /* Tu amarillo para detalles */
+  --text-dark: #333333;
+  --text-light: #666666;
+  --bg-container: rgba(255, 255, 255, 0.95); /* Fondo blanco semitransparente */
 }
 
-/* Reset y estilos base */
+/* --- Reseteo Básico --- */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-body);
-}
-
-.container {
-  background-image: url('https://drive.google.com/uc?export=download&id=15oJu--x1hm1ddpL9N8v-ZnAWQ_NATc6X');
-  height: 100%;
-  width: 100%;
-  position: relative;
+/* --- Fondo y Cuerpo --- */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-dark);
+  /* Aquí está la corrección de tu fondo */
+  background-image: url('img/logo.gif');
   background-size: cover;
   background-position: center;
-  margin: 0;
-  padding: 20px;
+  background-attachment: fixed;
+  background-color: var(--primary-color); /* Color de respaldo */
+  
+  /* Centrar el contenedor en la pantalla */
   display: flex;
-  flex-direction: column;
-}
-
-/* Header */
-.header {
-  font-family: var(--font-title);
-  color: var(--text-color);
-  font-size: 25px;
-  text-align: center;
-  border: 15px solid;
-  border-style: inset;
-  border-color: var(--primary-color);
-  margin-bottom: 30px;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-}
-
-.subtitle {
-  font-size: 18px;
-  margin-top: 5px;
-  font-weight: normal;
-}
-
-/* Contenido principal */
-.main-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profile-section {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.photo-container {
-  flex: 0 0 auto;
-}
-
-.profile-photo {
-  width: 350px;
-  height: 350px;
-  border-radius: 10%;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.info-section {
-  flex: 1;
-  min-width: 300px;
-  max-width: 600px;
-}
-
-/* Secciones de información */
-.education, .skills, .contact {
-  margin-bottom: 30px;
+  align-items: center;
+  min-height: 100vh;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-h2 {
-  font-family: var(--font-title);
-  color: var(--text-color);
-  font-size: 22px;
-  margin-top: 0;
+/* --- Contenedor del CV --- */
+.cv-container {
+  background-color: var(--bg-container);
+  max-width: 700px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* --- Cabecera --- */
+.cv-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 5px solid var(--accent-color);
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+}
+
+.header-titles h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.header-titles h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #D6EAF8;
+}
+
+/* --- Cuerpo del CV --- */
+.cv-body {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.info-section h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-color);
   margin-bottom: 15px;
-  border-bottom: 2px solid var(--primary-color);
+  font-size: 18px;
+  border-bottom: 2px solid #eeeeee;
   padding-bottom: 5px;
 }
 
-ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
+.info-list, .contact-list {
+  list-style: none;
 }
 
-li {
+.info-list li {
   margin-bottom: 15px;
-  font-size: 18px;
-  line-height: 1.5;
-  color: transparent;
-  background: var(--background-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
+  display: flex;
+  flex-direction: column;
 }
 
-strong {
-  font-weight: 700;
+.info-list li span {
+  color: var(--text-light);
+  font-size: 14px;
+  margin-top: 3px;
 }
 
-.github-link {
-  color: #4da6ff;
-  text-decoration: none;
-  font-weight: bold;
+.contact-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
 }
 
-.github-link:hover {
-  text-decoration: underline;
+.contact-list i {
+  color: var(--secondary-color);
+  width: 20px;
 }
 
-.contact-info {
-  font-size: 18px;
-  line-height: 1.5;
-  color: transparent;
-  background: var(--background-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  margin-bottom: 20px;
-}
-
-/* Botones */
-.buttons-container {
+/* --- Botones --- */
+.cv-actions {
+  padding: 0 30px 30px 30px;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  margin-top: 20px;
+  justify-content: center;
 }
 
 .btn {
-  font-family: var(--font-title);
-  font-size: 18px;
-  font-weight: lighter;
-  background: var(--button-bg);
-  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
   border: none;
-  color: var(--button-text);
-  padding: 12px 24px;
+  cursor: pointer;
   text-decoration: none;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  position: relative;
-  transition: transform 0.2s;
+  gap: 8px;
+  transition: all 0.3s ease;
+  color: white;
 }
 
-.btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 120%;
-  height: 120%;
-  background: linear-gradient(45deg, red, blue, deeppink, blue, red, blue, deeppink, blue);
-  background-size: 800%;
-  border-radius: 12px;
-  filter: blur(8px);
-  animation: glowing 20s linear infinite;
-}
+.btn-whatsapp { background-color: #25D366; }
+.btn-whatsapp:hover { background-color: #1EBE5A; }
 
-.btn:hover {
-  transform: translateY(-2px);
-}
+.btn-github { background-color: #333; }
+.btn-github:hover { background-color: #111; }
 
-.btn:active {
-  transform: translateY(1px);
-}
+.btn-cv { background-color: var(--secondary-color); }
+.btn-cv:hover { background-color: #1A5276; }
 
-.share-icon {
-  width: 20px;
-  height: 20px;
-  margin-left: 8px;
-  filter: invert(1);
-}
+.btn-share { background-color: var(--accent-color); color: var(--primary-color); }
+.btn-share:hover { background-color: #D4AC0D; }
 
-/* QR */
-.qr-section {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-
-.qr-code {
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  background-color: white;
-  padding: 5px;
-}
-
-/* Animación */
-@keyframes glowing {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .container {
-    padding: 10px;
-  }
-  
-  .header {
-    font-size: 20px;
-    border-width: 10px;
-  }
-  
-  .profile-section {
+/* --- Diseño Responsivo (Móviles) --- */
+@media (max-width: 600px) {
+  .cv-header {
     flex-direction: column;
-    align-items: center;
-  }
-  
-  .profile-photo {
-    width: 250px;
-    height: 250px;
-  }
-  
-  .info-section {
-    width: 100%;
-  }
-  
-  .buttons-container {
-    justify-content: center;
-  }
-  
-  .btn {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-  
-  .qr-section {
-    position: static;
     text-align: center;
-    margin-top: 20px;
   }
   
-  .qr-code {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header {
-    font-size: 18px;
-  }
-  
-  .profile-photo {
-    width: 200px;
-    height: 200px;
-  }
-  
-  li, .contact-info {
-    font-size: 16px;
+  .cv-actions {
+    flex-direction: column;
   }
   
   .btn {
     width: 100%;
-    margin-bottom: 10px;
+    justify-content: center;
   }
 }
